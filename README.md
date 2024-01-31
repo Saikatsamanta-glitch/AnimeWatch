@@ -30,7 +30,7 @@ Before you start, make sure you have the following installed on your machine:
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/anime-series-app.git
+   git clone https://github.com/Saikatsamanta-glitch/AnimeWatch.git
 
 ## Contributing
 Contributions are welcome! If you have any ideas for improvements or find any issues, please create a new issue or submit a pull request. Make sure to follow our code of conduct.
