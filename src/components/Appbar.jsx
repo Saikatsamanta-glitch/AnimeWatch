@@ -1,13 +1,25 @@
-import React from 'react'
-import brand from '../resource/brand.png'
+import React,{useState} from 'react';
+import brand from '../resource/brand.png';
 export default function Appbar() {
+    const [visible,setVisible]=useState(false);
     return (
-        <nav className='h-20 bg-slate-900 md:px-8 px-1'>
+        <nav className='h-20 bg-slate-900 md:px-8 px-1 flex justify-between items-center text-white relative'>
             <div className='h-full flex items-end'>
                 <img className='h-full translate-y-2' src={brand} />
-                <h1 className='text-3xl text-white md:block hidden'>AnimeHead</h1>
+                <h1 className='text-3xl md:block hidden'>AnimeHead</h1>
             </div>
-        <div></div>
+            <ul className='gap-x-8 text-2xl items-center hidden md:flex'>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>Uploads</li>
+            </ul>
+            <div className='bg-white rounded-full h-14 w-14 hidden md:flex'></div>
+            <button onClick={()=>{setVisible(!visible)}} className='md:hidden block text-3xl pr-3'><i className="fi fi-br-menu-burger"></i></button>
+            <ul className={`h-60 w-40 rounded-lg right-1 md:hidden bg-slate-900 absolute top-[84px] text-2xl p-5 ${visible?'flex':'hidden'} flex-col gap-y-2`}>
+                <li>Home</li>
+                <li>Contact</li>
+                <li>Uploads</li>
+            </ul>
         </nav>
     )
 }
