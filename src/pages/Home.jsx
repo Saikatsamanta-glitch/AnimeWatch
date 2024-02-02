@@ -8,7 +8,7 @@ import 'swiper/css/pagination';
 
 
 // import required modules
-import { Pagination } from 'swiper/modules';
+import { Pagination,Autoplay } from 'swiper/modules';
 import sliderImg from '../util/slider';
 
 export default function Home() {
@@ -20,7 +20,12 @@ export default function Home() {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        modules={[Pagination,Autoplay]}
         className="mySwiper"
       >
         {

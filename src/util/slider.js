@@ -3,6 +3,6 @@ const sliderImg=[
     'https://wallpapers.com/images/featured/death-note-htruruirspqq0zot.jpg',
     'https://static.bandainamcoent.eu/high/jujutsu-kaisen/jujutsu-kaisen-cursed-clash/01-news/jjkcc-character-trailer-1.jpg',
     'https://www.hindustantimes.com/ht-img/img/2023/04/21/1600x900/maxresdefault_1682057844226_1682057853799.jpg',
-    'https://static.euronews.com/articles/stories/07/38/86/86/1440x810_cmsv2_34816e51-346c-525e-9d16-c92108f88346-7388686.jpg'
+    'https://wallpapers.com/images/hd/demon-slayer-pictures-tsbyd3y88kxirm15.jpg'
 ]
 export default sliderImg;
