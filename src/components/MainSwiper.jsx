@@ -11,18 +11,19 @@ import 'swiper/css/pagination';
 import { Pagination,Autoplay } from 'swiper/modules';
 
 
-export default function MainSwiper({ children }) {
+export default function MainSwiper({ children,perSlide, auto }) {
+    console.log(perSlide)
   return (
       <Swiper
-        slidesPerView={'auto'}
+        slidesPerView={perSlide}
         spaceBetween={30}
         pagination={{
           clickable: true,
         }}
-        autoplay={{
+        autoplay= {auto?{
           delay: 2500,
           disableOnInteraction: false,
-        }}
+        }:false}
         loop={true}
         modules={[Pagination,Autoplay]}
         className="mySwiper"
