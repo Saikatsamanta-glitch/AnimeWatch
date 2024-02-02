@@ -1,23 +1,9 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import brand from '../resource/brand.png';
 export default function Appbar() {
-    const [visible,setVisible]=useState(false);
-    function hideTab(){
+    const [visible, setVisible] = useState(false);
+    function hideTab() {
         setVisible(!visible);
-        if(visible){
-            document.body.addEventListener('click', closetab );
-        }
-    }
-    
-    function closetab(e){
-            console.log("clicked",e.target.classList.contains('tab'));
-            if(visible){
-                if(!e.target.classList.contains('tab')){
-                setVisible(false)
-            }
-            }
-            
-            
     }
     
     return (
@@ -32,8 +18,8 @@ export default function Appbar() {
                 <li>Uploads</li>
             </ul>
             <div className='bg-white rounded-full h-14 w-14 hidden md:flex'></div>
-            <button onClick={hideTab} className='tab md:hidden block text-3xl pr-3'><i className="fi fi-br-menu-burger"></i></button>
-            <ul className={`tab h-60 w-40 rounded-lg right-1 md:hidden bg-slate-900 absolute top-[84px] text-2xl p-5 ${visible?'flex':'hidden'} flex-col gap-y-2`}>
+            <button onClick={hideTab} className=' md:hidden block text-3xl pr-3'><i className="fi fi-br-menu-burger"></i></button>
+            <ul className={`tab h-60 w-40 rounded-lg right-1 md:hidden bg-slate-900 absolute top-[84px] text-2xl p-5 ${visible ? 'flex' : 'hidden'} flex-col gap-y-2`}>
                 <li>Home</li>
                 <li>Contact</li>
                 <li>Uploads</li>
