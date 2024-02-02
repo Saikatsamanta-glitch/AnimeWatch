@@ -1,33 +1,12 @@
 import React, { useRef, useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-
-
-// import required modules
-import { Pagination,Autoplay } from 'swiper/modules';
+import MainSwiper from '../components/MainSwiper';
+import TopAnimes from '../components/TopAnimes';
 import sliderImg from '../util/slider';
-
+import { SwiperSlide } from 'swiper/react';
 export default function Home() {
   return (
     <>
-      <Swiper
-        slidesPerView={'auto'}
-        spaceBetween={30}
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        loop={true}
-        modules={[Pagination,Autoplay]}
-        className="mySwiper"
-      >
+      <MainSwiper>
         {
           sliderImg.map((v, i) => {
             return <SwiperSlide className='relative'>
@@ -36,7 +15,8 @@ export default function Home() {
             </SwiperSlide>
           })
         }
-      </Swiper>
+      </MainSwiper>
+      <TopAnimes />
     </>
   );
 }
